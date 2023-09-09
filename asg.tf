@@ -14,7 +14,7 @@ resource "aws_launch_template" "app_server_launch_template" {
     enabled = true
   }
 
-  user_data = base64encode(templatefile("${path.module}/<enter the name of your script here>.tpl", {
+  user_data = base64encode(templatefile("${path.module}/<enter the name of your script here>", {
     PROJECT_NAME = 
     ENVIRONMENT  = 
     RECORD_NAME  = 
